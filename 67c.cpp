@@ -1,3 +1,6 @@
+//int this problem you have given n numbers..there are two players..first player will pick some value then the remainng will be second one..
+//now first player have to pick in such a way so that their difference of sum is minimized...
+//problem..atcoder 67c
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
