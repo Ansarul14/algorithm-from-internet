@@ -20,6 +20,14 @@ int main()
     {
         cin>>s1>>s2;
         tx=mp[s1];
+        /*amra jani j disjoint set union a first a size diye dewar lage..
+       jehetu akhne string value tai avbe to r size dewa jai na..
+       amra map use kreci..then tx er vitor mp[s1] er value nlm..initially ta 0 hbe..
+       jehety 0 holo mane hcce ei name ta first input hisebe asce
+       tai tar size 1 increment kore dlm ..let
+       s1="ansar";
+       mp[ansar]=1 hye gelo...abr ansar asle r increment hbe na bcz already hye gece..*/
+
         if (tx==0)
         {
             mp[s1]=++size;
@@ -31,6 +39,13 @@ int main()
             mp[s2]=++size;
             ty=mp[s2];
         }
+        /*avbe tx,ty diye asole jeta ber korlam seta hlo j j name ta input nicci seta koto number a//
+        let say "ansar","islam"
+               "tohid","sabbir"
+               so absar=1,islam=2,tohid=3,sabbir=4;
+               avbe set hye thklo...
+               amra age jeta krtm setai..akhn make set k call kore dlm..
+               thle okhne (1,2)gelo giye ager motoi akhn 1 er parent size asb check krbe...*/
         make_set(tx,ty);
     }
     int query;
@@ -41,6 +56,8 @@ int main()
         tx=mp[s1];
         ty=mp[s2];
        // cout<<tx<<" "<<ty<<endl;
+
+
         p=fi(tx,ty);
        if (p==true)
         cout<<"They are frind.."<<endl;
